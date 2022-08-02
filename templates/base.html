@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %} - FlaskApp</title>
+    <style>
+        .title {
+            margin-left: 45px;
+        }
+
+        .content {
+            margin: 5px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        ul {
+        list-style-type: none;
+        display: block;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #fff;
+        }
+
+        ul li {
+        display: inline-block;
+        margin: 0;
+        padding-right: 30%;
+        
+        }
+
+        .name {
+            margin: 5px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .team_name {
+            margin: 5px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+
+        .player {
+            padding: 10px;
+            margin: 10px;
+            background-color: #fff;
+        }
+
+        .team {
+            flex: 20%;
+            padding: 10px;
+            margin: 5px;
+            background-color: #f3f3f3;
+            inline-size: 100%;
+            text-decoration: none;
+
+        }
+
+        .title a {
+            color: #0047ab;
+            text-decoration: none;
+        }
+
+        a:link { 
+            text-decoration: none; 
+        }
+
+        nav a {
+            color: #000;
+            font-size: 2em;
+            margin-left: 50px;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('index') }}">Teams</a>
+        <a href="{{ url_for('players') }}">Players</a>
+        
+    </nav>
+    <hr>
+    <div class="content">
+        {% block content %} {% endblock %}
+    </div>
+</body>
+</html>

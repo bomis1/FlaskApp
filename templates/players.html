@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <span class="title"><h1>{% block title %} All Players {% endblock %}</h1></span>
+    <div class="content">
+                {% for player in players %}
+                    <div class="player">
+                        <i>
+                            <!-- (#{{ player.id }}) -->
+                            <p>{{player.player}}</p>
+                        </i>
+                        <p class="title">
+                            <a href="{{ url_for('team',
+                                        team_id=player.team.id) }}">
+                                    {{player.name}}
+                            </a>
+                        </p>
+                    </div>
+                {% endfor %}
+            </div>
+    </div>
+{% endblock %}

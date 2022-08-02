@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <span class="title"><h1>{% block title %} Team: {{ team.team_name }}  {% endblock %}</h1></span>
+    <div class="content">
+            <div class="team">
+                <form method="post">
+                    <p>
+                        <input name="content"
+                                    placeholder=""
+                                    cols="30"
+                                    rows="4"></input>
+                    </p>
+           
+                    <p>
+                        <button type="submit">Add player</button>
+                    </p>
+                </form>
+                <h3>Players</h3>
+                {% for player in team.players %}
+                    <div class="player">
+                        <ul>
+                            <li>{{ player.name }}</li>
+                            <li >
+                                <form method="POST"
+                                    action="{{url_for('delete_player',
+                                                    player_id=player.id) }}">
+                                    <input type="submit" value="Delete Player"
+                                        onclick="return confirm('confirm deletion')">
+                                </form>
+                             </li>
+                        </ul>  
+                    </div>
+                {% endfor %}
+            </div>
+    </div>
+{% endblock %}
