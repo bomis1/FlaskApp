@@ -2,7 +2,7 @@ FROM python:3.6-alpine
 
 EXPOSE 5000
 
-WORKDIR /app
+WORKDIR /flaskapp
 
 RUN python3 -m pip install --upgrade pip
 COPY requirements.txt .
