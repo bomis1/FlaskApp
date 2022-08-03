@@ -11,7 +11,7 @@ agent any
         {
             steps{
             sh 'pip install -r requirements.txt'
-            sh 'pytest-3 --junitxml results.xml'
+            sh 'pytest --junitxml results.xml'
             }
         }
 
