@@ -2,7 +2,7 @@ pipeline {
 environment {  
 registry = "bomis1/flaskapp"  
 registryCredential = 'dockerhub_id'
-dockerImage = ''
+dockerImage = 'flaskmysql'
 HOME = "${env.WORKSPACE}"
 }
 agent any
@@ -10,7 +10,7 @@ agent any
     stage ('Testing')
         {
             steps{
-            sh 'pip3 install -r requirements.txt'
+            sh 'pip install -r requirements.txt'
             sh 'pytest-3 --junitxml results.xml'
             }
         }
