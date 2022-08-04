@@ -1,5 +1,6 @@
 # Import the necessary modules
-from flask import url_for
+#from flask import url_for
+from ./app import app
 from flask_testing import TestCase
 
 # import the app's classes and objects
