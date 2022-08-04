@@ -2,7 +2,7 @@ pipeline {
 environment {  
 registry = "bomis1/flaskapp"  
 registryCredential = 'dockerhub_id'
-dockerImage = 'flaskmysql'
+dockerImage = ''
 HOME = "${env.WORKSPACE}"
 }
 agent any
