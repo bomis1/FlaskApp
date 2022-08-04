@@ -1,11 +1,11 @@
 # Import the necessary modules
-from unicodedata import name
-from urllib import response
 from flask import url_for
 from flask_testing import TestCase
 # import the app's classes and objects
 from flaskapp.app import app, db, Team, Player 
-# Create the base class
+from ..app import app, db, Team, Player 
+
+# Create the base class  
 class TestBase(TestCase):
     def create_app(self):
         # Pass in testing configurations for the app. 
