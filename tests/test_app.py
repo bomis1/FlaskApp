@@ -1,6 +1,8 @@
 # Import the necessary modules
-#from flask import *
-from flask_testing import TestCase
+#from flask import url_for
+from flask import *
+#from flask_testing import TestCase
+from flask_testing import *
 
 # import the app's classes and objects
 from app import app, db, Team, Player 
