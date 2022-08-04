@@ -4,7 +4,7 @@ from urllib import response
 from flask import url_for
 from flask_testing import TestCase
 # import the app's classes and objects
-from flaskapp.app import app, db, Team, Player 
+from ..app import app, db, Team, Player 
 # Create the base class
 class TestBase(TestCase):
     def create_app(self):
