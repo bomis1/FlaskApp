@@ -7,13 +7,13 @@ HOME = "${env.WORKSPACE}"
 }
 agent any
     stages {
-    stage ('Testing')
+    /* stage ('Testing')
         {
             steps{
             sh 'pip install -r requirements.txt'
             sh 'pytest-3 --junitxml results.xml'
             }
-        }
+        } */
 
     stage('Building our image') {
     steps{
